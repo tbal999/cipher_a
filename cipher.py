@@ -15,17 +15,29 @@ cipher3_input = input("Type in cipher3 here:" )
 cipher = (int(cipher1_input),int(cipher2_input),int(cipher3_input))
 
 def encode():
-    global stringlist
     global codeindex
+    global stringlist
     xindex = 0
     yindex = 0
     for i in stringlist[xindex:]:
         for a in cipher[yindex:]:
-            stringlist[xindex] = stringlist[xindex] + a
-            yindex = yindex + xindex
-        xindex = xindex+1
-        yindex = 0
+            yindex = yindex + 1
+            if yindex == 0:
+                stringlist[xindex] = stringlist[xindex] + a
+                break
+            if yindex == 1:
+                stringlist[xindex] = stringlist[xindex] + a
+                break
+            if yindex == 2:
+                stringlist[xindex] = stringlist[xindex] + a
+                break
+            if yindex == 3:
+                stringlist[xindex] = stringlist[xindex] + a
+                yindex = 0
+                break
+        xindex = xindex + 1
     codeindex = codeindex + 1
+    
         
 def decode():
     global codeindex
@@ -34,10 +46,21 @@ def decode():
     yindex = 0
     for i in stringlist[xindex:]:
         for a in cipher[yindex:]:
-            stringlist[xindex] = stringlist[xindex] - a
-            yindex = yindex - xindex
-        xindex = xindex+1
-        yindex = 0
+            yindex = yindex + 1
+            if yindex == 0:
+                stringlist[xindex] = stringlist[xindex] - a
+                break
+            if yindex == 1:
+                stringlist[xindex] = stringlist[xindex] - a
+                break
+            if yindex == 2:
+                stringlist[xindex] = stringlist[xindex] - a
+                break
+            if yindex == 3:
+                stringlist[xindex] = stringlist[xindex] - a
+                yindex = 0
+                break
+        xindex = xindex + 1
     codeindex = codeindex - 1
     
 def printX():
@@ -57,7 +80,8 @@ def printX():
 
 def quitoK():
     quit()
-    time.sleep(1)
+    print("just keep pressing q!!")
+    time.sleep(0.5)
     return()
     quitoK()
     
