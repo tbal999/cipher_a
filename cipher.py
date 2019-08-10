@@ -4,7 +4,6 @@ Created on Fri Aug  9 18:11:11 2019
 
 @author: thoma
 """
-import time
 codeindex = 0
 stringlist = []
 
@@ -37,6 +36,7 @@ def encode():
                 break
         xindex = xindex + 1
     codeindex = codeindex + 1
+    start()
     
         
 def decode():
@@ -62,6 +62,7 @@ def decode():
                 break
         xindex = xindex + 1
     codeindex = codeindex - 1
+    start()
     
 def printX():
     global stringlist
