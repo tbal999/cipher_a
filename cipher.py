@@ -4,11 +4,6 @@ Created on Fri Aug  9 18:11:11 2019
 
 @author: thoma
 """
-import os
-def addToClipBoard(text):
-    command = 'echo ' + text.strip() + '| clip'
-    os.system(command)
-
 codeindex = 0
 
 #cipher input.
