@@ -90,10 +90,10 @@ def start():
     print("i to import a string from export.txt")
     print("s to input your own string.")
     print("Type anything else to quit")
-    x = input("Type here:" )
+    x = input("Choose your option:" )
     if x == "s":
         stringlist.clear()
-        string_input = input("Type in string here:" )
+        string_input = input("Please type in string here:" )
         for i in string_input:
             stringlist.append(ord(i))
         start()
