@@ -9,6 +9,8 @@ def addToClipBoard(text):
     command = 'echo ' + text.strip() + '| clip'
     os.system(command)
 
+codeindex = 0
+
 #cipher input.
 cipher1_input = input("Type in cipher1 here:" )
 cipher2_input = input("Type in cipher2 here:" )
@@ -21,26 +23,28 @@ for i in string_input:
     stringlist.append(ord(i))
 
 def encode():
+    global codeindex
     xindex = 0
     yindex = 0
     for i in stringlist[xindex:]:
         for a in cipher[yindex:]:
-            print(a,i)
             stringlist[xindex] = stringlist[xindex] + a
             yindex = yindex + xindex
         xindex = xindex+1
         yindex = 0
+    codeindex = codeindex + 1
         
 def decode():
+    global codeindex
     xindex = 0
     yindex = 0
     for i in stringlist[xindex:]:
         for a in cipher[yindex:]:
-            print(a,i)
             stringlist[xindex] = stringlist[xindex] - a
             yindex = yindex - xindex
         xindex = xindex+1
         yindex = 0
+    codeindex = codeindex - 1
     
 def printX():
     chrlist = []
@@ -49,7 +53,6 @@ def printX():
     seperator = ''
     printy = seperator.join(chrlist)
     print(printy)
-    addToClipBoard(printy)
     chrlist.clear()
     start()
     
@@ -57,12 +60,11 @@ def quitoK():
     quit()
     
 def start():
-    print(cipher)
-    print(stringlist)
-    x = input("Type encode, decode, print (or quit):" )
-    if x == "encode":
+    print(cipher, "index:", codeindex)
+    x = input("Type plus, minus, print (or quit):" )
+    if x == "plus":
         encode()
-    if x == "decode":
+    if x == "minus":
         decode()
     if x == "print":
         printX()
