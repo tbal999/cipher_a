@@ -4,18 +4,15 @@ Created on Fri Aug  9 18:11:11 2019
 
 @author: thoma
 """
+
 codeindex = 0
+stringlist = []
 
 #cipher input.
 cipher1_input = input("Type in cipher1 here:" )
 cipher2_input = input("Type in cipher2 here:" )
 cipher3_input = input("Type in cipher3 here:" )
 cipher = (int(cipher1_input),int(cipher2_input),int(cipher3_input))
-
-string_input = input("Type in string here:" )
-stringlist = []
-for i in string_input:
-    stringlist.append(ord(i))
 
 def encode():
     global codeindex
@@ -48,24 +45,40 @@ def printX():
     seperator = ''
     printy = seperator.join(chrlist)
     print(printy)
+    f = open("export.txt","w+")
+    for i in printy:
+        f.write(i)
     chrlist.clear()
     start()
-    
 def quitoK():
     quit()
     
 def start():
-    print(cipher, "index:", codeindex)
-    x = input("Type plus, minus, print (or quit):" )
-    if x == "plus":
+    global string_input
+    global stringlist
+    print("stringlist:",stringlist)
+    print("cipher:",cipher, "index:", codeindex)
+    print("Type + (for add index), - (for deduct index), p (to print string) or q (to exit)...")
+    print("Or type i to import a string from export.txt")
+    x = input("Type here:" )
+    if x == 's':
+        string_input = input("Type in string here:" )
+        stringlist = []
+        for i in string_input:
+            stringlist.append(ord(i))
+    if x == "i":
+        f1 = open("export.txt","r")
+        string_input = f1.read()
+        for i in string_input:
+            stringlist.append(ord(i))
+    if x == "+":
         encode()
-    if x == "minus":
+    if x == "-":
         decode()
-    if x == "print":
+    if x == "p":
         printX()
-    if x == "quit":
+    if x == "q":
         quitoK()
     else:
         start()
-    
 start()
