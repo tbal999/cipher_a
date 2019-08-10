@@ -77,13 +77,6 @@ def printX():
     chrlist.clear()
     f.close()
     start()
-
-def quitoK():
-    quit()
-    print("just keep pressing q!!")
-    time.sleep(0.5)
-    return()
-    quitoK()
     
 def start():
     global stringlist
@@ -95,7 +88,7 @@ def start():
     print("p to print out stored string to export.txt")
     print("i to import a string from export.txt")
     print("s to input your own string.")
-    print("q to quit")
+    print("Type anything else to quit")
     x = input("Type here:" )
     if x == "s":
         stringlist.clear()
@@ -117,8 +110,7 @@ def start():
         decode()
     if x == "p":
         printX()
-    if x == "q":
-        quitoK()
     else:
-        start()
+        quit()
+
 start()
