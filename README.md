@@ -1,9 +1,10 @@
 # A-Cipher
-it's a cipher
+It's a cipher for fun. 
+NOT FOR SERIOUS PURPOSES i.e anything that you actually want to keep a secret.
 
-This uses a three-digit cipher.
+This uses a three-digit cipher with an index.
 
-I.e 1,5,1 or 2,6,3 etc.
+I.e 1,5,1 (index 1) or 2,6,3 (index 2) etc.
 
 You can:
 - type in a string i.e "Hello this is a string".
@@ -19,7 +20,7 @@ TO ENCRYPT:
 - type in a string for somebody:
 "Hello this is a string"
 
-- press "+" once to encrypt it once. 
+- press "+" once (for index 1) to encrypt it once. 
 - then press p to export it to "export.txt":
 "Igomq#ujlt"lt"d!uwskqh"
 
@@ -31,7 +32,15 @@ TO DECRYPT:
 - import the string in "export.txt"
 "Igomq#ujlt"lt"d!uwskqh"
 
-- press "-" once to decrypt it once.
+- press "-" once (for index 1) to decrypt it once.
 - then press p to export it to "export.txt":
 "Hello this is a string"
+
+You can encrypt things using multiple "indexes" as well.
+Igomq#ujlt"lt"d!uwskqh = "Hello this is a string" cipher 123, index 1.
+Jirns&vlou$ou$g"wztmti = "Hello this is a string" cipher 123, index 2.
+Kkuou)wnrv&rv&j#y}uowj = "Hello this is a string" cipher 123, index 3.
+
+All you need to do is decrypt it the same number of times the other person encrypted it.
+
 
