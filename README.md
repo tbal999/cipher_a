@@ -1,6 +1,6 @@
 # A-Cipher
 It's a cipher for fun. 
-NOT FOR SERIOUS PURPOSES i.e anything that you actually want to keep a secret.
+***NOT FOR SERIOUS PURPOSES***
 
 This uses a three-digit cipher with an index.
 
