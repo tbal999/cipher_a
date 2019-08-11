@@ -12,7 +12,8 @@ You can:
 - use p to print the string to a file called "export.txt" which will be created in the same folder as the script.
 - use i to import a string from the same file.
 
-General use case would be :-
+Use cases:
+---
 TO ENCRYPT:
 - Type in the cipher1, cipher2 and cipher3:
 1,2,3
@@ -35,8 +36,8 @@ TO DECRYPT:
 - press "-" once (for index 1) to decrypt it once.
 - then press p to export it to "export.txt":
 "Hello this is a string"
-
-You can encrypt things using multiple "indexes" as well.
+---
+You can encrypt things using multiple indexes as well.
 Igomq#ujlt"lt"d!uwskqh = "Hello this is a string" cipher 123, index 1.
 Jirns&vlou$ou$g"wztmti = "Hello this is a string" cipher 123, index 2.
 Kkuou)wnrv&rv&j#y}uowj = "Hello this is a string" cipher 123, index 3.
