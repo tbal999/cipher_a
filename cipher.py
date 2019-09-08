@@ -74,7 +74,7 @@ def printX():
 def start():
     global stringlist
     print("stringlist:",stringlist)
-    print("cipher:",cipher, "index:", codeindex)
+    print("Currently CIPHER:",cipher, "INDEX:", codeindex)
     print("Type:")
     print("+ for add index (cipher)") 
     print("- for deduct index (cipher)")
