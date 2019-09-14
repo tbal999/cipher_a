@@ -25,7 +25,7 @@ def encode():
                 stringlist[xindex] = stringlist[xindex] + a
                 break
             if yindex == 1:
-                stringlist[xindex] = stringlist[xindex] - a
+                stringlist[xindex] = stringlist[xindex] + a
                 break
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] + a
@@ -47,7 +47,7 @@ def decode():
                 stringlist[xindex] = stringlist[xindex] - a
                 break
             if yindex == 1:
-                stringlist[xindex] = stringlist[xindex] + a
+                stringlist[xindex] = stringlist[xindex] - a
                 break
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] - a
