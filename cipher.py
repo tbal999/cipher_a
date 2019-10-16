@@ -23,14 +23,17 @@ def encode():
             yindex = yindex + 1
             if yindex == 0:
                 stringlist[xindex] = stringlist[xindex] + a
+                print("a")
                 break
             if yindex == 1:
                 stringlist[xindex] = stringlist[xindex] + a
+                print("b")
                 break
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] + a
+                print("c")
+                yindex = -1
                 break
-            yindex = -1
         xindex = xindex + 1
     codeindex = codeindex + 1
     start()
@@ -51,6 +54,7 @@ def decode():
                 break
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] - a
+                yindex = -1
                 break
             yindex = -1
         xindex = xindex + 1
