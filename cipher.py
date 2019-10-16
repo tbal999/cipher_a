@@ -30,11 +30,11 @@ def encode():
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] + a
                 break
+            yindex = -1
         xindex = xindex + 1
     codeindex = codeindex + 1
     start()
     
-        
 def decode():
     global codeindex
     global stringlist
@@ -52,6 +52,7 @@ def decode():
             if yindex == 2:
                 stringlist[xindex] = stringlist[xindex] - a
                 break
+            yindex = -1
         xindex = xindex + 1
     codeindex = codeindex - 1
     start()
