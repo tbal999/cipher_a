@@ -1,6 +1,5 @@
 # Cipher_a
-It's a cipher for fun. 
-***NOT FOR SERIOUS PURPOSES***
+It's a simple cipher for fun. 
 
 This uses a three-digit cipher with an index.
 
